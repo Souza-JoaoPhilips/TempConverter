@@ -6,14 +6,16 @@ on:
       - main
 
 jobs:
+
   DigaOla:
     runs-on: ubuntu-latest
     steps:
-      - name: Print greeting
-        run: echo "Ola"
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Diga Ola
+        uses: ./.github/actions/DigaOla-action
 
   Build:
-    needs: DigaOla
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
