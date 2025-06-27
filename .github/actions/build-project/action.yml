@@ -1,0 +1,8 @@
+name: Build Project
+description: Executa o build com Gradle
+runs:
+  using: "composite"
+  steps:
+    - name: Run Gradle Build
+      run: ./gradlew build
+      shell: bash
